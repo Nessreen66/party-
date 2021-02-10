@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body >
+
+    <!--start header section-->
+    <header class="bg-info w-100">
+        <!--start navbar-->
+        <nav class="vh-100  nav-container" id="navContainer">
+             <div class="d-flex">
+              <!-- Inner Nav  -->
+                <div class="first-nav p-0" id="navItems">
+
+                    <div class="inner-nav d-flex flex-column justify-content-between vh-100 bg-dark">
+                        <ul class="navbar-nav p-3 position-relative overflow-hidden">
+                            <li class="nav-item my-item">
+                                <a class="nav-link text-white js-Path" href="#" name="https://api.themoviedb.org/3/movie/now_playing?api_key=eba8b9a7199efdcb0ca1f96879b83c44">Now Playing</a>
+                            </li>
+                            <li class="nav-item my-item">
+                                <a class="nav-link text-white js-Path" href="#" name="https://api.themoviedb.org/3/movie/popular?api_key=eba8b9a7199efdcb0ca1f96879b83c44">Popular</a>
+                            </li>
+                            <li class="nav-item my-item">
+                                <a class="nav-link text-white js-Path" href="#" name="https://api.themoviedb.org/3/movie/top_rated?api_key=eba8b9a7199efdcb0ca1f96879b83c44">Top Rated</a>
+                            </li>
+                            <li class="nav-item my-item">
+                                <a class="nav-link text-white js-Path" href="#" name="https://api.themoviedb.org/3/trending/all/day?api_key=eba8b9a7199efdcb0ca1f96879b83c44">Trending</a>
+                            </li>
+                            <li class="nav-item my-item">
+                                <a class="nav-link text-white js-Path" href="#" name="https://api.themoviedb.org/3/movie/upcoming?api_key=eba8b9a7199efdcb0ca1f96879b83c44">UpComing</a>
+                            </li>
+                            <li class="nav-item my-item">
+                                <a class="nav-link text-white" href="#contact" >Contact Us</a>
+                            </li>
+                        </ul>
+
+                        <div class="p-3">
+                            <div class="icon">
+                                <a href="#"><i class="fab fa-facebook-f fa-1x p-2 text-white"></i></a>
+                                <a href="#"><i class="fab fa-twitter p-2  fa-1x text-white"></i></a>
+                                <a href="#"><i class="fas fa-globe p-2 fa-1x  text-white"></i></a>
+                            </div>
+                            <div class="pt-3">
+                                <span class="text-muted">Copyright Â© 2019 All Rights Reserved.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Outer Nav Bar  -->
+                <div class="second-nav p-0">
+                    <div class="nav-outer bg-white vh-100 d-flex flex-column justify-content-between p-3">
+
+
+                        <img src="images/logo.png" class="img-fluid" alt="">
+                        <a href="#"><i class="fa fa-align-justify  fa-2x " id="iconClose"></i></a>
+                        <div class=" text-center h5">
+
+                            <i class="fas fa-globe fa-1x pb-3"></i>
+                            <i class="fas fa-share-alt fa-1x"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- End outer Nav Bar  -->
+
+            </div>
+
+
+
+        </nav>
+
+
+    </header>
+
+    <!-- end header section -->
+
+    <!-- start api section -->
+
+    <div class="container w-75 m-auto">
+        <div class="row my-5">
+            <div class="col-md-6">
+                <div class="search">
+                    <input type="text" name="" id="searchMovie" placeholder="Get Movies By Word.."
+                        class="form-control bg-transparent our-input">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="search">
+                    <input type="text" name="" id="word" placeholder="Search.."
+                        class="form-control bg-transparent our-input">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="row py-3" id="movieList">
+
+
+
+        </div>
+
+    </div>
+
+    <!-- end api section -->
+    <!--start contact section-->
+    <section id="contact" class="container  w-75 mx-auto my-5 ">  
+        <h2 class="text-light my-5">ContacUs...</h2>
+        <div class="row">
+          <div class="col-md-6">
+        <div class="form-group">
+          <input class="form-control  our-input bg-transparent" id="name" placeholder="Enter Your Name">
+            <div class="alert alert-danger" id="namealert" role="alert">
+              Your Name is not valid
+            </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <input class="form-control our-input bg-transparent" id="email" placeholder="Enter Email">
+          <div class="alert alert-danger" id="emailalert" role="alert">
+            enter valid email
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <input class="form-control our-input bg-transparent" id="phone" placeholder="Enter phone">
+          <div class="alert alert-danger" id="phonealert" role="alert">
+            enter valid phone
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <input class="form-control our-input bg-transparent" id="age" placeholder="Enter Age">
+          <div class="alert alert-danger" id="agealert" role="alert" style="display: none;">
+            enter valid Age
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <input class="form-control our-input bg-transparent" type="password" id="password" placeholder="Enter Password">
+          <div class="alert alert-danger" id="passwordalert" role="alert">
+            enter valid password Minimum eight characters, at least one letter and one number:
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <input class="form-control our-input bg-transparent" type="password" id="rePassword" placeholder="Enter RePassword">
+          <div class="alert alert-danger" id="repasswordalert" role="alert">
+            Your Repassword is not Match
+          </div>
+        </div>
+      </div>
+    
+    
+      </div>  
+        
+        <button type="submit" disabled id="submitBtn" class="btn btn-outline-danger">Submit</button>
+    
+      </section>
+
+    <!--end contact section-->
+
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+
+</html>
